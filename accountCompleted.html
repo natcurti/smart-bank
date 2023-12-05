@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="camera.js" defer></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            light: '#5326a3',
+                            dark: '#1f0947'
+                        },
+                        'off-white': '#f5f2fa',                       
+
+                    },
+                    fontFamily: {
+                        openSans: ['Open Sans', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'radial-gradient': 'radial-gradient(circle, rgba(83,38,163,1) 0%, rgba(31,9,71,1) 100%)'
+                    },
+                    screens: {
+                        xs: '480px',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Smart Bank</title>
+</head>
+<body class="bg-off-white">
+    <header class="bg-radial-gradient w-full h-20 flex justify-between items-center mb-5 px-2 box-border sm:px-6">
+        <div class="flex justify-center items-center w-auto gap-2">
+            <a href="index.html"><img src="./assets/img/icon-bank.png" alt="Logo redondo, com um recorte no meio simbolizando uma instituição financeira." class="h-9 cursor-pointer sm:h-11"></a>
+            <a href="index.html"><h1 class="font-openSans text-off-white text-xl sm:text-2xl"><span class="font-bold">Smart</span><span class="italic">Bank</span></h1></a>
+        </div>
+        <div class="relative h-full flex justify-between items-center gap-4 sm:gap-8">
+            <button class="cursor-pointer text-off-white xs:hidden" id="btnMenuBars"><i class="fa-solid fa-bars text-xl"></i></button>
+            <button class="cursor-pointer h-full font-openSans text-off-white text-xs justify-center items-center gap-2 hidden xs:flex sm:text-base" id="btnMenu">Menu<i class="fa-solid fa-angle-down"></i></button>
+            <nav>
+                <ul class="absolute top-20 right-0 z-20 w-40 font-openSans text-sm text-purple-dark bg-white text-center shadow-xl opacity-0 pointer-events-none -translate-y-4 transition-opacity duration-500	transition-transform xs:left-0 xs:text-base xs:w-52 data-[menu=open]:opacity-100 data-[menu=open]:translate-y-0 data-[menu=open]:pointer-events-auto" data-menu>
+                    <li class="p-2"><a href="#" class="hover:border-b-solid hover:border-b-purple-dark hover:border-b-2">Produtos para Você</a></li>
+                    <li class="p-2"><a href="#" class="hover:border-b-solid hover:border-b-purple-dark hover:border-b-2">Produtos para Empresas</a></li>
+                    <li class="p-2"><a href="#" class="hover:border-b-solid hover:border-b-purple-dark hover:border-b-2">Educação Financeira</a></li>
+                    <li class="p-2"><a href="#" class="hover:border-b-solid hover:border-b-purple-dark hover:border-b-2">Canais de Atendimento</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cursor-pointer font-openSans font-bold rounded-2xl text-purple-dark text-xs bg-off-white p-1.5 shadow-xl transition duration-300 ease-in-out hover:bg-purple-light hover:text-off-white hidden xs:block sm:text-sm">Acessar Conta</a>
+            <a href="account.html" class="cursor-pointer font-openSans font-bold rounded-2xl text-purple-dark text-xs bg-off-white p-1.5 shadow-xl transition duration-300 ease-in-out hover:bg-purple-light hover:text-off-white hidden xs:block sm:text-sm">Abrir Conta</a>
+        </div>
+    </header>
+    <main>
+        <section class="relative w-full h-52 mb-8 after:content-[''] after:absolute after:top-0 after:left-0 after:right-0 after:bottom-0 after:bg-gradient-to-r from-purple-light to-transparent sm:h-96">
+            <img src="./assets/img/img-04.jpg" alt="Imagem de uma mão mexendo no celular" class="w-full h-full object-cover">
+            <h2 class="absolute z-20 left-4 top-1/2 -translate-y-1/2 w-32 font-openSans font-bold text-off-white text-sm sm:text-xl sm:w-52 sm:left-8 lg:left-24 lg:text-2xl lg:w-60 lg:text-center">Encontre a conta que mais combina com você e dê o primeiro passo para sua liberdade financeira</h2>
+        </section>
+        <section class="px-8 flex flex-col justify-center items-center gap-4 lg:px-32">
+            <div class="flex justify-center items-center gap-2 self-start font-openSans font-bold text-purple-dark text-center">
+                <a href="index.html">Início</a>
+                <p>&gt</p>
+                <p>Abrir Conta</p>
+                <p>&gt</p>
+                <p>Cadastro Finalizado</p>
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="bg-purple-light w-4 h-4 rounded-full sm:w-6 sm:h-6"></div>
+                <div class="bg-purple-light w-16 h-0.5 rounded-lg sm:w-24"></div>
+                <div class="bg-purple-light w-4 h-4 rounded-full sm:w-6 sm:h-6"></div>
+                <div class="bg-purple-light w-16 h-0.5 rounded-lg sm:w-24"></div>
+                <div class="bg-purple-light w-4 h-4 rounded-full sm:w-6 sm:h-6"></div>
+            </div>
+            <h3 class="font-roboto font-bold text-purple-dark text-center sm:text-xl">Cadastro Completo!</h3>
+            <i class="fa-regular fa-thumbs-up text-purple-dark text-7xl"></i>
+            <p class="font-roboto text-purple-dark text-center sm:w-[36rem]">Sua conta foi criada e você irá receber todos os detalhes via email. <strong>Confirme o link</strong> enviado para poder começar a usá-la.</p>
+            <p class="font-roboto text-purple-dark text-center">Se desejar baixe nosso aplicativo escaneando o QR Code abaixo:</p>
+            <img src="./assets/img/qr-code.png" alt="QR Code para ser escaneado pelo celular" class="w-32 sm:w-52">
+        </section>
+    </main>        
+    <footer class="mt-8">    
+        <section class="p-4 w-full h-auto bg-gradient-to-t from-purple-dark to-purple-light text-off-white font-openSans grid justify-center items-center gap-4 text-center xs:grid-cols-2 md:grid-cols-4">
+            <ul class="flex flex-col gap-2">
+                <li><h5 class="font-bold text-base">SmartBank</h5></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Sobre Nós</a></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Perguntas Frequentes</a></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Carreiras</a></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Integridade e Ética</a></li>
+            </ul>
+            <ul class="flex flex-col gap-2">
+                <li><h5 class="font-bold text-base">Produtos e Serviços</h5></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Conta Corrente</a></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Conta Poupança</a></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Cartões de Crédito</a></li>
+                <li><a href="#" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Seguros</a></li>
+            </ul>
+            <ul class="flex flex-col gap-2">
+                <li><h5 class="font-bold text-base">Fale com a gente</h5></li>
+                <li><a href="tel:+558001111111" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">SAC 0800 111 1111</a></li>
+                <li><a href="tel:+558002222222" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Ouvidoria 0800 222 2222</a></li>
+                <li><a href="mailto:contato@smartbank.com.br" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Envie um email</a></li>
+                <li><a href="mailto:help@smartbank.com.br" class="cursor-pointer text-sm hover:border-b-solid hover:border-b-off-white hover:border-b-2">Ajuda</a></li>
+            </ul>
+            <ul class="flex flex-col gap-2">
+                <li><h5 class="font-bold text-base">Acesse nossas redes</h5></li>
+                <div class="flex gap-8 justify-center">
+                    <li><a href="#" class="cursor-pointer text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                    <li><a href="#" class="cursor-pointer text-lg"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="cursor-pointer text-lg"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+                <li class="text-2xl"><span class="font-bold">Smart</span><span class="italic">Bank</span></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
+
+
